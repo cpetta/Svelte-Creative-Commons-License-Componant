@@ -13,28 +13,25 @@
 	let licenceImg2 = "";
 	let licenceImg3 = "";
 	
-	let zero = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" />`;
-	let by = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" />`;
-	let sa = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" />`;
-	let nc = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" />`;
-	let nd = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" />`;
+	let zero = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="" />`;
+	let by = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" />`;
+	let sa = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" />`;
+	let nc = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" />`;
+	let nd = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" />`;
 	
 	if(author !== "") {
-		autherHtml = `by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href=${authorURL}>${author}	</a>`;
+		autherHtml = `by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href=${authorURL}>${author}</a>`;
 	}
 	
 	if(workName !== "") {
 		workNameHtml = `<a rel="cc:attributionURL" property="dct:title" href=${workURL}>${workName}</a>`;
-	}
-	else if(workURL !== "") {
+	} else if(workURL !== "") {
 		workNameHtml = `<a rel="cc:attributionURL" property="dct:title" href=${workURL}>This work</a>`;
-	}
-	else {
+	} else {
 		workNameHtml = "This work";
 	}
 	
-	switch(licenceType)
-	{
+	switch(licenceType) {
 		case "zero":
 			licenceURL = "https://creativecommons.org/publicdomain/zero/1.0";
 			licenceName = "CC CC0 1.0";
@@ -104,5 +101,5 @@
 	{@html workNameHtml}
 	{@html autherHtml}
 	is licensed under
-	<a rel="license" href={licenceURL}>{licenceName}<img class="ccimg" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" />{@html licenceImg}{@html licenceImg2}{@html licenceImg3}</a>
+	<a rel="license" href={licenceURL}>{licenceName}<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" />{@html licenceImg}{@html licenceImg2}{@html licenceImg3}</a>
 </p>
