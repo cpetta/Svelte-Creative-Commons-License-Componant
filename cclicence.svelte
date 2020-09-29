@@ -5,7 +5,7 @@
 	export let workURL = "";
 	export let licenceType = "";
 	
-	let autherHtml = "";
+	let authorHtml = "";
 	let workNameHtml = "";
 	let licenceURL = "";
 	let licenceName = "";
@@ -20,7 +20,7 @@
 	let nd = `<img style="height: 22px !important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" />`;
 	
 	if(author !== "") {
-		autherHtml = `by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href=${authorURL}>${author}</a>`;
+		authorHtml = `by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href=${authorURL}>${author}</a>`;
 	}
 	
 	if(workName !== "") {
@@ -99,7 +99,7 @@
 	 xmlns:cc="http://creativecommons.org/ns#" 
 	 class="license-text">
 	{@html workNameHtml}
-	{@html autherHtml}
+	{@html authorHtml}
 	is licensed under
 	<a rel="license" href={licenceURL}>{licenceName}<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" />{@html licenceImg}{@html licenceImg2}{@html licenceImg3}</a>
 </p>
